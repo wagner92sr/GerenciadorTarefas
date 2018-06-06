@@ -17,8 +17,8 @@
         <td><%= task.details %></td>
         <td><%= task.due_date %></td>
         <td><%= task.category.name %></td>
-        <td><%= l task.created_at %></td>
-        <td><%= l task.updated_at %></td>
+        <td><%= l task.created_at, format: :short %></td>
+        <td><%= l task.updated_at, format: :short %></td>
       </tr>
     <% end %>
   </tbody>
