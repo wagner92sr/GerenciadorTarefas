@@ -1,0 +1,10 @@
+development: 
+  adapter: postgresql
+  enconding: unicode
+  pool: 5
+  database: todo_development
+  username: postgres # <--- mude o usuário aqui
+  password: postgres
+
+
+
