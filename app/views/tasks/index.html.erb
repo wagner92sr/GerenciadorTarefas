@@ -1,10 +1,10 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>Categoria</th>
       <th>Nome</th>
       <th>Detalhes</th>
-      <th>Prazo</th>
-      <th>Categorias</th>
+      <th>Prazo</th>      
       <th>Criado em</th>
       <th>Atualizado em</th>
     </tr>
@@ -13,12 +13,12 @@
   <tbody>
     <% @tasks.each do |task| %>
       <tr>
-        <td><%= task.name %></td>
-        <td><%= task.details %></td>
-        <td><%= task.due_date %></td>
-        <td><%= task.category.name %></td>
-        <td><%= l task.created_at, format: :short %></td>
-        <td><%= l task.updated_at, format: :short %></td>
+         <td><%= task.category.name %></td>
+         <td><%= task.name %></td>
+         <td><%= task.details %></td>
+         <td><%= task.due_date %></td>        
+         <td><%= l task.created_at, format: :short %></td>
+         <td><%= l task.updated_at, format: :short %></td>
       </tr>
     <% end %>
   </tbody>

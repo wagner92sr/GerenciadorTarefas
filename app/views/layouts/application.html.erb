@@ -10,6 +10,22 @@
   </head>
 
   <body>
+    <div class="container">
+  <nav class="navbar navbar-light bg-faded">
+    <%= link_to  "Gerenciador de tarefas", root_path, class: 'navbar-brand' %>
+
+    <ul class='nav navbar-nav'>
+     <li class='nav-item'>
+        <%= link_to  "Nova Tarefa", new_task_path, class: 'nav-link' %>
+      </li>
+    </ul>
+  </nav>
+
+<div class='row'>
+  <div class='col-sm-12'>
     <%= yield %>
+    </div>
+    </div>
+    </div>
   </body>
 </html>
