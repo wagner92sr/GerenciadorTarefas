@@ -1,0 +1,10 @@
+pt-BR:
+  activerecord:
+    models:
+      task: Tarefa
+      category: Categoria
+
+    attributes:
+      task:
+        name: Nome
+        category: Categoria

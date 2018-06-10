@@ -1,3 +1,17 @@
-<%= form_for @task do |f| %> %>
- 
+<% if @task.errors.any? %>
+   <div class="alert alert-danger" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
+      </button>
+      <%= @task.errors.full_messages.to_sentence %>
+   </div>
+<% end %>
+
+<%= form_for @task do |f| %>
+   <%= f.label 'Nome' %>
+   <%= f.text_field :name %>
+
+   <br>
+
+   <%= f.submit 'Salvar' %>
 <% end %>

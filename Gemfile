@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
-
+#translate errors
+gem 'rails-i18n'
 #jqueryRails Bootstrap
 gem 'jquery-rails'
 #Bootstrap
