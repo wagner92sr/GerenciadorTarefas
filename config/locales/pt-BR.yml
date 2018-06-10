@@ -7,4 +7,6 @@ pt-BR:
     attributes:
       task:
         name: Nome
+        details: Detalhes
+        due_date: Prazo
         category: Categoria

@@ -14,7 +14,7 @@ class TasksController < ApplicationController
       @task = Task.new(task_params)
 
       if @task.save
-         redirect_to @task, notice: 'Tarefa criada com sucesso'
+         redirect_to tasks_path, notice: 'Tarefa criada com sucesso'
       else
          flash.now[:error] = @task.errors.full_messages.to_sentence
          render :new
@@ -23,7 +23,7 @@ class TasksController < ApplicationController
 
    def update
       if @task.update(task_params)
-         redirect_to @task, notice: 'Tarefa atualizada com sucesso'
+         redirect_to tasks_path, notice: 'Tarefa atualizada com sucesso'
       else
          flash.now[:error] = @task.errors.full_messages.to_sentence
          render :edit
