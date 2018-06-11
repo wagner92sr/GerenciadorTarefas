@@ -2,7 +2,8 @@ class TasksController < ApplicationController
    before_action :set_task, only: [:show, :edit, :update, :destroy]
  
    def index
-      @tasks = Task.all
+      @finished_tasks = Task.done
+      @pending_tasks = Task.pending
    end
 
    def new
